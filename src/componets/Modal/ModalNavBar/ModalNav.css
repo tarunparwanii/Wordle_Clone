@@ -1,0 +1,106 @@
+.Modal-Nav {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 1%;
+  width: 100%;
+  border-radius: 0.5em;
+}
+
+.modal-nav-content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  padding: 1%;
+  width: 90%;
+  /* overflow: hidden; */
+}
+
+.nav-head {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+  background-color: hsla(208, 100%, 97%, 0.7);
+  width: 5em;
+  height: 4em;
+}
+
+.nav-head:last-child {
+  border-top-right-radius: 0.5em;
+  border-bottom-right-radius: 0.5em;
+  padding-right: 2%;
+}
+.nav-head:first-child {
+  border-top-left-radius: 0.5em;
+  border-bottom-left-radius: 0.5em;
+  padding-left: 2%;
+}
+
+.icon {
+  z-index: 3;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 200%;
+}
+
+.nav-head:hover .icon,
+.nav-head:focus .icon,
+.nav-head:active .icon {
+  animation: reveal 0.5s ease-out forwards;
+}
+
+.heading {
+  z-index: 3;
+  position: absolute;
+  transition: 0.5s;
+  width: 100%;
+  margin-top: 1%;
+  font-size: 70%;
+  font-weight: bold;
+  text-transform: capitalize;
+  opacity: 0;
+  transform: translateY(1em);
+}
+
+.nav-head:hover .heading {
+  opacity: 1;
+  transform: translateY(0.5em);
+}
+
+.icon.activeNav {
+  transform: translateY(-1em);
+  transition: 0.5s;
+  height: 2em;
+  width: 2em;
+  background: #29fd53;
+  color: black;
+  border-radius: 50%;
+  border: 0.15em black solid;
+}
+
+@keyframes reveal {
+  from {
+    transform: translateY(-1em);
+    transition: 0.5s;
+    height: 2em;
+    width: 2em;
+    background: #29fd53;
+    border-radius: 50%;
+    border: 0.15em black solid;
+  }
+
+  to {
+    transform: translateY(-1em);
+    transition: 0.5s;
+    height: 2em;
+    width: 2em;
+    background: #29fd53;
+    color: black;
+    border-radius: 50%;
+    border: 0.15em black solid;
+  }
+}

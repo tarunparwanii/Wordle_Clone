@@ -1,0 +1,46 @@
+.Allstats-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  border: 0.1em solid;
+  width: min-content;
+  gap: 1%;
+  border-image: repeating-linear-gradient(
+      to bottom right,
+      #33475b,
+      #0033cc,
+      #ff77cc,
+      rgb(255, 122, 89)
+    )
+    20;
+}
+
+.Allstats-heading {
+  justify-content: center;
+  color: hotpink;
+  font-size: 120%;
+  font-weight: bold;
+}
+
+.Allstats-Score {
+  justify-content: center;
+  color: cyan;
+  font-size: 120%;
+  font-weight: bold;
+}
+
+.Allstats-line {
+  display: flex;
+  flex: 1 1 0;
+  justify-content: center;
+  gap: 4%;
+}
+
+.chart{
+  display: flex;
+  /* border: #ff77cc solid 0.1em; */
+  /* width: fit-content;
+  height: fit-content; */
+  padding: 1%;
+}

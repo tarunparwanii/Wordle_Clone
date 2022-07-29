@@ -1,0 +1,18 @@
+.single-stats-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: #f0f8ff;
+  padding: 1%;
+}
+
+.stat-heading {
+  font-weight: bold;
+}
+
+.stat-value {
+  font-weight: bold;
+  color: #00ffff;
+}

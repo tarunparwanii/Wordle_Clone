@@ -1,0 +1,17 @@
+.game {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 82%;
+  margin-top: 1%;
+  z-index: 0;
+}
+
+.game-container {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-radius: 0.7em;
+}

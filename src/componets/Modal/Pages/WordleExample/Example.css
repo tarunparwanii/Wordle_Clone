@@ -1,0 +1,70 @@
+.examples {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  border: pink 0.15em solid;
+  padding: 1%;
+  border-radius: 1em;
+  width: 90%;
+  border-top: none;
+  border-bottom: none;
+  font-size: 105%;
+}
+
+.example {
+  color: whitesmoke;
+  padding: 1%;
+}
+
+.example-heading {
+  color: whitesmoke;
+  font-size: 110%;
+  padding: 1%;
+  border-bottom: 0.2em solid;
+  border-radius: 0.5em;
+}
+
+.rules-row {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 0.25em;
+  width: 80%;
+  background-color: #818384;
+  padding: 1%;
+}
+
+.rules-tile {
+  color: whitesmoke;
+  font-size: 1.5em;
+  min-height: 1em;
+  min-width: 1em;
+  height: 70%;
+  width: 20%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  background-color: hsla(240, 3%, 7%, 1);
+  border: 0.05em solid hsl(240, 3%, 19%);
+  user-select: none;
+  font-family: Helvetica;
+  font-weight: bold;
+}
+
+.rules-row > .rules-tile.correct {
+  border: 0.05em solid hsla(0, 17%, 2%, 0.9);
+  background-color: hsl(115, 29%, 43%);
+}
+
+.rules-row > .rules-tile.almost {
+  border: 0.05em solid hsla(0, 17%, 2%, 0.9);
+  background-color: hsl(49, 51%, 47%);
+}
+
+.rules-row > .rules-tile.error {
+  border: 0.05em solid hsla(0, 17%, 2%, 0.9);
+  background-color: hsl(240, 2%, 23%);
+}

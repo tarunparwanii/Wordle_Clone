@@ -1,0 +1,132 @@
+.row {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 0.25em;
+  z-index: 0;
+  width: 100%;
+}
+
+.tileEmpty {
+  font-size: 2em;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  z-index: 0;
+  min-height: 1.5em;
+  min-width: 1.5em;
+  height: 80%;
+  width: 20%;
+  color: white;
+  background-color: hsla(240, 3%, 7%, 0.75);
+  border: 0.05em solid hsla(0, 0%, 94%, 0.4);
+  user-select: none;
+  font-family: Helvetica;
+  font-weight: bold;
+}
+
+.tileFilled {
+  font-size: 2em;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 0;
+  min-height: 1.5em;
+  min-width: 1.5em;
+  height: 80%;
+  width: 20%;
+  color: white;
+  background-color: hsla(240, 3%, 7%, 0.75);
+  border: 0.05em solid hsl(240, 3%, 19%);
+  user-select: none;
+  font-family: Helvetica;
+  font-weight: bold;
+  animation: poping 0.1s ease-in-out forwards;
+}
+
+.tileFilled2 {
+  font-size: 2em;
+  z-index: 0;
+  min-height: 1.5em;
+  min-width: 1.5em;
+  height: 80%;
+  width: 20%;
+  color: white;
+  background-color: hsla(240, 3%, 7%, 0.75);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  user-select: none;
+  font-family: Helvetica;
+  font-weight: bold;
+  animation: flip 0.8s ease-in-out forwards;
+}
+
+/* EACH TILE CSS */
+
+.row > .tileFilled2.correct {
+  --border: 0.05em solid hsla(0, 17%, 2%, 0.9);
+  --background-color: hsl(115, 29%, 43%);
+}
+
+.row > .tileFilled2.almost {
+  --border: 0.05em solid hsla(0, 17%, 2%, 0.9);
+  --background-color: hsl(49, 51%, 47%);
+}
+
+.row > .tileFilled2.error {
+  --border: 0.05em solid hsla(0, 17%, 2%, 0.9);
+  --background-color: hsl(240, 2%, 23%);
+}
+
+.row > .tileFilled2:nth-child(2) {
+  animation-delay: 0.2s;
+}
+.row > .tileFilled2:nth-child(3) {
+  animation-delay: 0.4s;
+}
+.row > .tileFilled2:nth-child(4) {
+  animation-delay: 0.6s;
+}
+.row > .tileFilled2:nth-child(5) {
+  animation-delay: 0.8s;
+}
+
+/* GAME BOARD ENDS */
+
+/* ANIMATIONS */
+
+@keyframes flip {
+  0% {
+    transform: rotateX(0);
+    border: 0.05em solid hsl(240, 2%, 23%);
+  }
+  45% {
+    transform: rotateX(90deg);
+    border: 0.05em solid hsl(240, 2%, 23%);
+  }
+  55% {
+    transform: rotateX(90deg);
+    border: 0.05em solid hsl(240, 2%, 23%);
+  }
+  100% {
+    transform: rotateX(0);
+    background-color: var(--background-color);
+    border: var(--border);
+  }
+}
+@keyframes poping {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.2);
+    border: 0.05em solid hsl(0, 0%, 96.08%);
+  }
+  100% {
+    transform: scale(1);
+    border: 0.05em solid hsl(0, 0%, 96.08%);
+  }
+}

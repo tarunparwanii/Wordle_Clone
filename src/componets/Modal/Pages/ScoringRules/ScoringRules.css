@@ -1,0 +1,62 @@
+.scoringrules-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  border-radius: 1.5em;
+  border: rgb(65, 105, 225) 0.2em solid;
+  border-right: none;
+  border-left: none;
+  font-size: 125%;
+  width: 90%;
+  height: min-content;
+}
+
+.scoringrules-container:hover {
+  box-shadow: 0px 8px 16px rgba(65, 105, 225, 0.7);
+}
+
+.scoringrules-heading {
+  height: 2%;
+  color: orange;
+}
+
+table {
+  color: orange;
+  margin: 2%;
+  border: none;
+  border-collapse: collapse;
+  border: 0.1em solid royalblue;
+}
+
+table thead {
+  text-align: center;
+  color: olive;
+  border: 0.1em solid royalblue;
+}
+
+table th {
+  font-size: 90%;
+  border-left: 0.1em solid royalblue;
+  border-right: 0.1em solid royalblue;
+}
+
+table td {
+  text-align: center;
+  border-left: 0.1em solid royalblue;
+  border-right: 0.1em solid royalblue;
+}
+
+table td:first-child {
+  border-left: none;
+}
+
+table td:last-child {
+  border-right: none;
+}
+
+.Bonus-info {
+  color: pink;
+  font-size: 60%;
+  text-align: center;
+}
